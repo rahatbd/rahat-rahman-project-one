@@ -30,9 +30,7 @@ body {
 }
 
 img {
-    /* width: 100%; */
     max-width: 100%;
-    /* height: 100%; */
     height: auto;
     display: block;
     object-fit: cover;
@@ -119,8 +117,6 @@ header img {
     top: 25px;
     right: 25px;
     visibility: hidden;
-
-    /* font-size: 1.5rem; */
 }
 
 .headerIcons {
@@ -160,7 +156,7 @@ header img {
 
 .secondSection h2 {
     text-align: center;
-    padding: 100px;
+    padding: 100px 0;
 }
 
 .gallery img {
@@ -248,7 +244,7 @@ form p {
     margin-bottom: 10px;
 }
 
-/* Q2 */
+/* Q2: It seems that I am having difficulty styling input boxes and I ended up spending an inordinate amount of time making the input box and the button the same height (and couldn't). I was not able to  also vertically centre the placeholder text as a result. I am also getting whitespace on the right which I covered up using negative margin. Not sure if it's the right approach but would love to know how to solve these issues.  */
 input {
     width: calc(100% - 160px);
     height: 38px;
@@ -289,7 +285,7 @@ input[type=email]::placeholder {
         width: 100%;
         /* border: 2px solid blue; */
     }
-    .image {
+    .blogImage {
         width: 100%;
     }
     .fourthSectionImage {
@@ -315,5 +311,199 @@ input[type=email]::placeholder {
     }
     .contact {
         width: 30%;
+    }
+}
+
+@media (max-width: 1120px) {
+    header {
+        min-height: 100vh;
+    }
+    h1, header img {
+        float: none;
+        margin: 0 auto;
+    }
+    h1 {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+    header nav {
+        display: none;
+    }
+    .fa-bars {
+        visibility: visible;
+    }
+    .headerIcons {
+        top: 550px;
+    }
+    .firstSection img {
+        min-height: 360px;
+    }
+    .fourthSectionText {
+        width: 80%;
+    }
+    footer {
+        padding-top: 50px;
+    }
+    footer nav, form,
+    .contact {
+        float: none;
+        width: 100%;
+    }
+    footer nav{
+        text-align: center;
+    }
+    footer li {
+        display: inline-block;
+        margin: 0 50px;
+    }
+    form h2 {
+        margin-top: 50px;
+    }
+    input {
+        width: 60%;
+    }
+    .contact {
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        min-height: 90vh;
+    }
+    .firstSection {
+        padding: 50px 0;
+    }
+    .firstSectionText,
+    .firstSection img {
+        float: none;
+        width: 100%;
+    }
+    .firstSectionText h2 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .firstSectionText button {
+        display: block;
+        margin: 0 auto;
+    }
+    .fourthSectionText {
+        width: 90%;
+    }
+}
+
+@media (max-width: 870px) {
+    header {
+        min-height: 80vh;
+    }
+    .headerIcons {
+        top: 500px;
+    }
+    .thirdSection {
+        height: 340px;
+    }
+    .icons {
+        width: 50%;
+    }
+    .icons:last-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 715px) {
+    header {
+        min-height: 75vh;
+    }
+    .headerIcons {
+        top: 430px;
+    }
+    footer li {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 620px) {
+    .wrapper {
+        width: 95%;
+    }
+    header {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+    .fa-bars {
+        top: 5px;
+    }
+    h1 {
+        text-align: right;
+        padding-top: 30px;
+    }
+    header img {
+        margin: 0;
+    }
+    .headerIcons {
+        visibility: hidden;
+    }
+    .thirdSection {
+        height: 480px;
+    }
+    .icons {
+        float: none;
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+/* Q3: I am also not sure how to make font-sizes responsive? Do I just manually change them when they are causing side-scroll or should I have used 'vw' from the beginning? In the real world will we be given font-sizes for the mobile screens as well? */
+@media (max-width: 590px) {
+    h1 {
+        font-size: 5.5rem;
+    }
+    header img {
+        position: relative;
+        left: -30px;
+        width: 80%;
+    }
+    footer li {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 5rem;
+        line-height: normal;
+    }
+    h2, .icons p {
+        font-size: 3rem;
+    }
+    .secondSection h2 {
+        padding: 50px 0;
+    }
+    .gallery img {
+        float: right;
+        width: 50%;
+        margin: 0;
+    }
+    .gallery img:nth-child(1) {
+        padding-left: 1%;
+    }
+    .gallery img:nth-child(2) {
+        display: none;
+    }
+    .gallery img:nth-child(3) {
+        padding-right: 1%;
+    }
+    footer li {
+        margin: 0 5px;
+    }
+    form p {
+        font-size: 1.5rem;
     }
 }
