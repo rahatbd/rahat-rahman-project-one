@@ -40,7 +40,6 @@ img {
     max-width: 1400px;
     width: 90%;
     margin: 0 auto;
-    /* border: 2px solid salmon; */
 }
 
 li {
@@ -65,7 +64,6 @@ h1 {
     float: left;
     width: calc(50% - 100px);
     margin: 200px 100px 0 0;
-    /* border: 2px solid red; */
 }
 
 h2 {
@@ -91,7 +89,6 @@ button {
 header {
     min-height: 90vh;
     position: relative;
-    /* border-bottom: 2px solid royalblue; */
 }
 
 header li {
@@ -109,7 +106,6 @@ header span {
 header img {
     float: left;
     width: 50%;
-    /* border: 2px solid green; */
 }
 
 .fa-bars {
@@ -140,14 +136,12 @@ header img {
     width: calc(25% - 30px);
     margin-right: 30px;
     min-height: 300px;
-    /* border: 2px solid green; */
 }
 
 .firstSectionText {
     float: left;
     width: 75%;
     padding-top: 10px;
-    /* border: 2px solid red; */
 }
 
 .firstSectionText p {
@@ -177,7 +171,6 @@ header img {
     font-size: 6rem;
     text-align: center;
     padding-top: 40px;
-    /* border: 2px solid gold; */
 }
 
 .icons p {
@@ -217,14 +210,12 @@ footer nav,
 .contact {
     float: left;
     width: 25%;
-    /* border: 2px solid blue; */
 }
 
 form {
     float: left;
     width: 50%;
     text-align: center;
-    /* border: 2px solid blue; */
 }
 
 footer nav {
@@ -244,7 +235,6 @@ form p {
     margin-bottom: 10px;
 }
 
-/* Q2: It seems that I am having difficulty styling input boxes and I ended up spending an inordinate amount of time making the input box and the button the same height (and couldn't). I was not able to  also vertically centre the placeholder text as a result. I am also getting whitespace on the right which I covered up using negative margin. Not sure if it's the right approach but would love to know how to solve these issues.  */
 input {
     width: calc(100% - 160px);
     height: 38px;
@@ -260,6 +250,10 @@ input[type=email]::placeholder {
 .contact {
     text-align: right;
     padding-top: 10px;
+}
+
+address {
+    font-style: normal;
 }
 
 .footerText {
@@ -283,7 +277,6 @@ input[type=email]::placeholder {
     .fourthSectionBottom {
         float: none;
         width: 100%;
-        /* border: 2px solid blue; */
     }
     .blogImage {
         width: 100%;
@@ -460,7 +453,6 @@ input[type=email]::placeholder {
     }
 }
 
-/* Q3: I am also not sure how to make font-sizes responsive? Do I just manually change them when they are causing side-scroll or should I have used 'vw' from the beginning? In the real world will we be given font-sizes for the mobile screens as well? */
 @media (max-width: 590px) {
     h1 {
         font-size: 5.5rem;

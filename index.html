@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Q1: I want to know what's the purpose of the below line? Do we need it? When I am using the '!' shortcut to generate the default html code I do not get the below line. I have to manually copy it, hence wondering if it's important. -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/c3eced3f24.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <title>Project 1: Galass Handbags</title>
 </head>
 
@@ -26,13 +25,18 @@
                 <h1>Galass<span>Handbags</span></h1>
                 <img src="styles/assets/group-bags.png" alt="a collection of bags">
             </div>
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <span class="sr-only">menu</span>
         </div>
         <div class="headerIcons">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-snapchat-ghost"></i>
-            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span>
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            <span class="sr-only">facebook</span>
+            <i class="fab fa-snapchat-ghost" aria-hidden="true"></i>
+            <span class="sr-only">snapchat</span>
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span>
         </div>
     </header>
 
@@ -42,7 +46,6 @@
                 <img src="styles/assets/square-photo.jpg" alt="woman carrying handbag">
                 <div class="firstSectionText">
                     <h2>Hand crafted</h2>
-                    <!-- Comment: It would be great if the PSD can be generated using the VS Code's lorem ipsum text. It's much easier to match the layout if the placeholder texts are the same! -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla</p>
                     <button>read more</button>
                 </div>
@@ -61,15 +64,15 @@
         <section class="thirdSection">
             <div class="wrapper clearfix">
                 <div class="icons">
-                    <i class="far fa-images"></i>
+                    <i class="far fa-images" aria-hidden="true"></i>
                     <p>catalogue</p>
                 </div>
                 <div class="icons">
-                    <i class="far fa-calendar-alt"></i>
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
                     <p>events</p>
                 </div>
                 <div class="icons">
-                    <i class="far fa-handshake"></i>
+                    <i class="far fa-handshake" aria-hidden="true"></i>
                     <p>collaborations</p>
                 </div>
             </div>
@@ -114,19 +117,20 @@
             <form>
                 <h2>Stay updated</h2>
                 <p>Subscribe to our newsletter to stay updated.</p>
-                <input type="email" name="email" id="email" placeholder="email address">
+                <input type="email" id="email" placeholder="email address">
                 <label for="email" class="sr-only">Email address</label>
-                <!-- <input type="submit" value="subscribe"> -->
-                <button type="submit">subscribe</button>
+                <button>subscribe</button>
             </form>
             <div class="contact" id="contact">
                 <h3>Contact</h3>
-                <p><a href="mailto:info@email.com">info@email.com</a> | <a href="tel:1234567890">123 - 456 -7890</a></p>
-                <p>123 some road, Toronto, ON</p>
-                <p>A5A 5A5, Canada</p>
+                <address>
+                    <a href="mailto:info@email.com">info@email.com</a> | <a href="tel:1234567890">123 - 456 - 7890</a><br>
+                    123 some road, Toronto, ON<br>
+                    A5A 5A5, Canada
+                </address>
             </div>
         </div>
-        <p class="footerText">Copright &#169; 2020 HackerYou. Created at <a href="https://junocollege.com/">Juno College.</a></p>
+        <p class="footerText">Copright &#169; 2020 HackerYou. Created at <a href="https://junocollege.com" target="_blank" rel="noopener noreferrer">Juno College.</a></p>
     </footer>
 </body>
 </html>
